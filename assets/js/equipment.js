@@ -526,8 +526,7 @@ const createEquipmentPrint = (condition) => {
             </ul>
         </div>`;
     if (condition == "combat") {
-        addCombatLog(`
-        ${enemy.name} dropped <span class="${item.rarity}">${item.rarity} ${item.category}</span>.<br>${panel}`);
+        addCombatLog(cnItem(`${enemy.name}`)+` dropped <span class="${item.rarity}">${item.rarity} ${item.category}</span>.<br>${panel}`);
     } else if (condition == "dungeon") {
         addDungeonLog(`
         You got <span class="${item.rarity}">${item.rarity} ${item.category}</span>.<br>${panel}`);

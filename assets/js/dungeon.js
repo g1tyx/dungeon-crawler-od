@@ -185,7 +185,7 @@ const dungeonEvent = () => {
                         <button id="choice2">Flee</button>
                     </div>`;
                 generateRandomEnemy();
-                addDungeonLog(`You encountered ${enemy.name}.`, choices);
+                addDungeonLog(`You encountered `+cnItem(`${enemy.name}`)+`.`, choices);
                 player.inCombat = true;
                 document.querySelector("#choice1").onclick = function () {
                     engageBattle();
@@ -282,7 +282,7 @@ const dungeonEvent = () => {
 const engageBattle = () => {
     showCombatInfo();
     startCombat(bgmBattleMain);
-    addCombatLog(`You encountered ${enemy.name}.`);
+    addCombatLog(`You encountered `+cnItem(`${enemy.name}`)+`.`);
     updateDungeonLog();
 }
 
@@ -291,8 +291,8 @@ const mimicBattle = (type) => {
     generateRandomEnemy(type);
     showCombatInfo();
     startCombat(bgmBattleMain);
-    addCombatLog(`You encountered ${enemy.name}.`);
-    addDungeonLog(`You encountered ${enemy.name}.`);
+    addCombatLog(`You encountered `+cnItem(`${enemy.name}`)+`.`);
+    addDungeonLog(`You encountered `+cnItem(`${enemy.name}`)+`.`);
 }
 
 // Guardian boss fight
@@ -301,7 +301,7 @@ const guardianBattle = () => {
     generateRandomEnemy("guardian");
     showCombatInfo();
     startCombat(bgmBattleGuardian);
-    addCombatLog(`Floor Guardian ${enemy.name} is blocking your way.`);
+    addCombatLog(`Floor Guardian `+cnItem(`${enemy.name}`)+` is blocking your way.`);
     addDungeonLog("You moved to the next floor.");
 }
 
@@ -310,8 +310,8 @@ const specialBossBattle = () => {
     generateRandomEnemy("sboss");
     showCombatInfo();
     startCombat(bgmBattleBoss);
-    addCombatLog(`Dungeon Monarch ${enemy.name} has awoken.`);
-    addDungeonLog(`Dungeon Monarch ${enemy.name} has awoken.`);
+    addCombatLog(`Dungeon Monarch `+cnItem(`${enemy.name}`)+` has awoken.`);
+    addDungeonLog(`Dungeon Monarch `+cnItem(`${enemy.name}`)+` has awoken.`);
 }
 
 // Flee from the monster
@@ -326,7 +326,7 @@ const fleeBattle = () => {
         addDungeonLog(`You failed to escape!`);
         showCombatInfo();
         startCombat(bgmBattleMain);
-        addCombatLog(`You encountered ${enemy.name}.`);
+        addCombatLog(`You encountered `+cnItem(`${enemy.name}`)+`.`);
         addCombatLog(`You failed to escape!`);
     }
 }

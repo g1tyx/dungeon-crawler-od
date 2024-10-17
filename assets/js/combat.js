@@ -32,10 +32,10 @@ const hpValidation = () => {
         enemyDead = true;
         player.kills++;
         dungeon.statistics.kills++;
-        addCombatLog(`${enemy.name} died! (${new Date(combatSeconds * 1000).toISOString().substring(14, 19)})`);
+        addCombatLog(cnItem(`${enemy.name}`)+` died! (${new Date(combatSeconds * 1000).toISOString().substring(14, 19)})`);
         addCombatLog(`You earned ${nFormatter(enemy.rewards.exp)} exp.`)
         playerExpGain();
-        addCombatLog(`${enemy.name} dropped <i class="fas fa-coins" style="color: #FFD700;"></i>${nFormatter(enemy.rewards.gold)} gold.`)
+        addCombatLog(cnItem(`${enemy.name}`)+` dropped <i class="fas fa-coins" style="color: #FFD700;"></i>${nFormatter(enemy.rewards.gold)} gold.`)
         player.gold += enemy.rewards.gold;
         playerLoadStats();
         if (enemy.rewards.drop) {
@@ -125,7 +125,7 @@ const playerAttack = () => {
     // Apply the calculations to combat
     enemy.stats.hp -= damage;
     player.stats.hp += lifesteal;
-    addCombatLog(`${player.name} dealt ` + nFormatter(damage) + ` ${dmgtype} to ${enemy.name}.`);
+    addCombatLog(`${player.name} dealt ` + nFormatter(damage) + ` ${dmgtype} to `+cnItem(`${enemy.name}`)+`.`);
     hpValidation();
     playerLoadStats();
     enemyLoadStats();
@@ -200,7 +200,7 @@ const enemyAttack = () => {
         enemy.stats.hp -= Math.round((15 * damage) / 100);
     }
     enemy.stats.hp += lifesteal;
-    addCombatLog(`${enemy.name} dealt ` + nFormatter(damage) + ` ${dmgtype} to ${player.name}.`);
+    addCombatLog(cnItem(`${enemy.name}`)+` dealt ` + nFormatter(damage) + ` ${dmgtype} to ${player.name}.`);
     hpValidation();
     playerLoadStats();
     enemyLoadStats();
@@ -326,7 +326,7 @@ const showCombatInfo = () => {
                 </div>
             </div>
             <div id="dmg-container"></div>
-            <img src="./assets/sprites/${enemy.image.name}${enemy.image.type}" alt="${enemy.name}" width="${enemy.image.size}" id="enemy-sprite">
+            <img src="./assets/sprites/${enemy.image.name}${enemy.image.type}" alt="cnItem(${enemy.name})" width="${enemy.image.size}" id="enemy-sprite">
         </div>
         <div class="battle-info-panel primary-panel" id="playerPanel">
             <p id="player-combat-info"></p>
