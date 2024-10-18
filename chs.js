@@ -399,6 +399,7 @@ var cnPrefix = {
     "Increase bonus HP by ": "提高 生命值 加成 ",
     "Goblin Archer": "哥布林弓箭手",
     "Goblin Mage": "哥布林法师",
+    "Legendary ": "传说的",
     "Heirloom ": "传家宝",
     "Rare ": "稀有的",
     "Epic ": "史诗的",
