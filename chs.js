@@ -624,7 +624,7 @@ var cnRegReplace = new Map([
     [/^([\d\.]+)e([\d\.,]+) elves$/, '$1e$2 精灵'],
     [/^([\d\.,]+) gold.$/, '$1 黄金。'],
     [/^([\d\.,]+) elves$/, '$1 精灵'],
-    [/^You leveled up! \(Lv.([\d\.,]+) \> Lv.([\d\.,]+)\)$/, '你升级了！（$1级 \> ￥2级）'],
+    [/^You leveled up! \(Lv.([\d\.,]+) \> Lv.([\d\.,]+)\)$/, '你升级了！（$1级 \> $2级）'],
     [/^You gained (.+) bonus VAMP from the blessing. \(Blessing Lv.(.+) \> Blessing Lv.(.+)\)$/, '你从祝福中获得 $1 额外 吸血。（祝福 $2 \> 祝福 32）'],
     [/^You gained (.+) bonus ATK from the blessing. \(Blessing Lv.(.+) \> Blessing Lv.(.+)\)$/, '你从祝福中获得 $1 额外 攻击。（祝福 $2 \> 祝福 32）'],
     [/^You gained (.+) bonus ATK.SPD from the blessing. \(Blessing Lv.(.+) \> Blessing Lv.(.+)\)$/, '你从祝福中获得 $1 额外 攻击速度。（祝福 $2 \> 祝福 32）'],
