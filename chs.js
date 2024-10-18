@@ -89,7 +89,7 @@ var cnItems = {
     "Titan's Will": "泰坦意志",
     "Passive": "被动",
     "Reset": "重置",
-    "Attacks deal extra 8% of enemies' current health on hit.": "攻击对敌人造成额外8%当前生命值的伤害。",
+    "Attacks deal extra 8% of enemies' current health on hit.": "攻击对敌人造成额外8%敌人当前生命值的伤害。",
     "Attacks deal extra 5% of your maximum health on hit.": "攻击时额外造成你最大生命值5%的伤害。",
     "Deal 30% more damage but you lose 30% base attack speed.": "造成30%以上的伤害，但你失去30%的基础攻击速度。",
     "Enemies receive 15% of the damage they dealt.": "敌人会收到他们造成的伤害的15%。",
