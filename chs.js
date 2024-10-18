@@ -426,6 +426,7 @@ var cnPrefix = {
     "Mimic": "模仿者",
     "Nameless Fallen King": "无名堕落之王",
     "Blood Manipulation Feral": "血术野性",
+    "Winter Wolf": "冬狼",
     "Wolf": "狼",
     "Spider": "蜘蛛",
     "Hellhound Inferni": "地狱恶犬",
